@@ -22,8 +22,10 @@ python models/complete_sheet_02_extrahours.py
 ## Author
 Ritikesh Dimri — Aspiring Operations Research Scientist
 
-> ℹ️ Note: This project is still under development. Models and documentation are being updated frequently.
-
 ## License
 This project is licensed under the [MIT License](LICENSE).
+
+> ℹ️ Note: This project is still under development. Models and documentation are being updated frequently.
+
+
 
