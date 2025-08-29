@@ -1,5 +1,5 @@
 # Industrial-Scale Production & Distribution Optimization
-
+**Optimizing industrial production and supply chain operations with Pyomo & Python.**  
 This project models a large-scale **production and distribution optimization** problem using **Pyomo** and **Gurobi**.
 
 ## Problem Overview
