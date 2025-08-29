@@ -8,7 +8,7 @@ A company produces 10 products (P1–P10) in 3 factories (F1–F3), ships them t
 - Factory: max production, machine & labor hours (overtime possible)
 - Warehouse handling capacities
 - Transport costs (Factory→Warehouse, Warehouse→Store)
-- Each store has max capacity per product and minimum demand = 50% of capacity per product
+- Each store has max capacity per product and minimum demand = 50% of capacity per product per store
 
 ## Objective
 Maximize: Revenue − Transportation cost − Overtime cost − Penalty for unmet demand
