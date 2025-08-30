@@ -5,10 +5,15 @@ A company produces 10 products (P1–P10) in 3 factories (F1–F3), ships them t
 
 ## Key Data & Constraints
 - Product sale price, production cost, machine & labor hours per unit
-- Factory: max production, machine & labor hours (overtime possible)
-- Warehouse handling capacities
+- Factory: per week max production, machine & labor hours (overtime possible)
+- Warehouse handling capacities per week (Inflows = Outflows)
 - Transport costs (Factory→Warehouse, Warehouse→Store)
-- Each store has max capacity per product and minimum demand = 50% of capacity per product per store
+- Each store has max capacity per product and minimum demand is 50% of max capacity per product per store
 
 ## Objective
+#### - For hybrid  model
 Maximize: Revenue − Transportation cost − Overtime cost − Penalty for unmet demand
+#### - For overtime model
+Maximize: Revenue - Transportation cost - Overtime cost
+#### - For unmet demand model
+Maximize: Revenue - Transportation cost - Penalty for unmet demand
