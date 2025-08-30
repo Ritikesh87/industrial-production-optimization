@@ -11,12 +11,12 @@ import pandas as pd
 
 
 # Importing data from sheet
-A=pd.read_excel('sheet02.xlsx',sheet_name='Production')
-B=pd.read_excel('sheet02.xlsx',sheet_name='Transportation_F_W')
-C=pd.read_excel('sheet02.xlsx',sheet_name='Factory')
-D=pd.read_excel('sheet02.xlsx',sheet_name='Warehouse')
-E=pd.read_excel('sheet02.xlsx',sheet_name='Transportation_W_S')
-G=pd.read_excel('sheet02.xlsx',sheet_name='Store_capacity')
+A=pd.read_excel('data\sheet02.xlsx',sheet_name='Production')
+B=pd.read_excel('data\sheet02.xlsx',sheet_name='Transportation_F_W')
+C=pd.read_excel('data\sheet02.xlsx',sheet_name='Factory')
+D=pd.read_excel('data\sheet02.xlsx',sheet_name='Warehouse')
+E=pd.read_excel('data\sheet02.xlsx',sheet_name='Transportation_W_S')
+G=pd.read_excel('data\sheet02.xlsx',sheet_name='Store_capacity')
 
 #==============================================================================
 
