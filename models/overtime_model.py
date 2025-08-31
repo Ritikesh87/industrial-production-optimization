@@ -141,15 +141,5 @@ opt=SolverFactory('gurobi')
 #model.pprint()
 result=opt.solve(model)
 print(result)
-for i in range(1,11):
-        print(value(sum(p[i,j] for j in range(1,4))))
-for i in range(1,11):
-    for j in range(1,4):
-        print(f"{p[i,j].value:03.0f}", end='   ')
-    print()
-
-for i in range(1, 11):
-    for s in range(1, 6):
-        total = sum(value(r[i, k, s]) for k in range(1, 6))  
-        print(f"{total:02.0f}", end="   ")  
-    print()
+# optimal profit value
+print('Optimal_profit=',value(model.obj))
