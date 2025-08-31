@@ -8,15 +8,21 @@ Created on Tue Aug 26 19:32:55 2025
 import pyomo.environ as pyo
 from pyomo.environ import *
 import pandas as pd
+import os
 
+# Project root = one level up from "models/"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+# Path to the Excel file
+excel_path = os.path.join(BASE_DIR, "data", "input.xlsx")
 
 # Importing data from sheet
-A=pd.read_excel('data\sheet02.xlsx',sheet_name='Production')
-B=pd.read_excel('data\sheet02.xlsx',sheet_name='Transportation_F_W')
-C=pd.read_excel('data\sheet02.xlsx',sheet_name='Factory')
-D=pd.read_excel('data\sheet02.xlsx',sheet_name='Warehouse')
-E=pd.read_excel('data\sheet02.xlsx',sheet_name='Transportation_W_S')
-G=pd.read_excel('data\sheet02.xlsx',sheet_name='Store_capacity')
+A=pd.read_excel(excel_path,sheet_name='Production')
+B=pd.read_excel(excel_path,sheet_name='Transportation_F_W')
+C=pd.read_excel(excel_path,sheet_name='Factory')
+D=pd.read_excel(excel_path,sheet_name='Warehouse')
+E=pd.read_excel(excel_path,sheet_name='Transportation_W_S')
+G=pd.read_excel(excel_path,sheet_name='Store_capacity')
 
 #==============================================================================
 
@@ -140,21 +146,6 @@ opt=SolverFactory('gurobi')
 #model.pprint()
 result=opt.solve(model)
 print(result)
-for i in range(1,11):
-        print(value(sum(p[i,j] for j in range(1,4))))
-for i in range(1,11):
-    for j in range(1,4):
-        print(f"{p[i,j].value:03.0f}", end='   ')
-    print()
-
-for i in range(1, 11):
-    for s in range(1, 6):
-        total = sum(value(r[i, k, s]) for k in range(1, 6))  
-        print(f"{total:02.0f}", end="   ")  
-    print()
-for i in range(1,11):
-    for s in range(1,6):
-        print(value(u[i,s]), end="  ")
-    print()
-print(value(model.obj)+500*value(sum(u[i,s]for i in range(1,11) 
+# optimal profit value = value(model.obj) + deducted penalties
+print('Optimal_profit=',value(model.obj)+500*value(sum(u[i,s]for i in range(1,11) 
                                         for s in range(1,6))))
