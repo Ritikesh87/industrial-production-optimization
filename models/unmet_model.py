@@ -9,15 +9,21 @@ Created on Tue Aug 26 11:34:14 2025
 import pyomo.environ as pyo
 from pyomo.environ import *
 import pandas as pd
+import os
 
+# Project root = one level up from "models/"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+# Path to the Excel file
+excel_path = os.path.join(BASE_DIR, "data", "input.xlsx")
 
 # Importing data from sheet
-A=pd.read_excel('data\sheet02.xlsx',sheet_name='Production')
-B=pd.read_excel('data\sheet02.xlsx',sheet_name='Transportation_F_W')
-C=pd.read_excel('data\sheet02.xlsx',sheet_name='Factory')
-D=pd.read_excel('data\sheet02.xlsx',sheet_name='Warehouse')
-E=pd.read_excel('data\sheet02.xlsx',sheet_name='Transportation_W_S')
-G=pd.read_excel('data\sheet02.xlsx',sheet_name='Store_capacity')
+A=pd.read_excel(excel_path,sheet_name='Production')
+B=pd.read_excel(excel_path,sheet_name='Transportation_F_W')
+C=pd.read_excel(excel_path,sheet_name='Factory')
+D=pd.read_excel(excel_path,sheet_name='Warehouse')
+E=pd.read_excel(excel_path,sheet_name='Transportation_W_S')
+G=pd.read_excel(excel_path,sheet_name='Store_capacity')
 
 #==============================================================================
 
