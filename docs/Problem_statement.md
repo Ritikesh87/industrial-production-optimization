@@ -12,9 +12,9 @@ A company produces **10 products (P1–P10)** in **3 factories (F1–F3)**, ship
 
 1. [**Hybrid model**](../models/hybrid_model.py)  
    Maximize: **Revenue − Transportation cost − Overtime cost − Penalty for unmet demand**
-3. [**Overtime model**](../models/overtime_model.py)    
+2. [**Overtime model**](../models/overtime_model.py)    
    Maximize: **Revenue − Transportation cost − Overtime cost**
-5. [**Unmet demand model**](../models/unmet_model.py)   
+3. [**Unmet demand model**](../models/unmet_model.py)   
    Maximize: **Revenue − Transportation cost − Penalty for unmet demand**
 
 ---
