@@ -109,3 +109,7 @@ Each store has a **maximum capacity per product (Max)**. The model enforces a **
 **Min-demand rule:** Each store must receive at least 50% of its listed capacity for each product. 
 
 ---
+
+**Links**:  
+1. Problem document (ODT): [Problem.odt](../docs/Problem.odt)  
+2. Updated tables and data in Excel: [input.xlsx](../data/input.xlsx), used as input for the [models](../models).
